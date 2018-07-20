@@ -29,7 +29,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/about">About</a>
@@ -39,6 +39,9 @@
       </li> 
       <li class="nav-item active">
         <a class="nav-link" href="/scoliosis">Scoliosis</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#"></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -61,7 +64,7 @@
 background-image: url(https://img.etsystatic.com/il/a37c2b/874893870/il_570xN.874893870_hr6j.jpg?version=0);
 
 /* Set a specific height */
-height: 600px;
+height: 200px;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -72,71 +75,38 @@ background-size: cover;
 </style>
 
 <!-- Container element -->
-<div class="parallax">
-  <div class="title">
-    <h1 id="home-title" class="display-1" style="text-align:center;padding-top:100px;">WeKure</h1>
-    <p class="display-5" style="text-align:center;">Everything you need to know about the leading medical conditions affecting adolescents today<br>Made by teens, for teens.</p>
-  </div>
-</div>
-
-
-<!--    <h4 class="display-1" style="text-align:center; padding-bottom: 0px;"><font size="4">Everything you need to know about the leading medical conditions affecting adolescents today<br> Made by teens, for teens.</font></h4>-->
-    <!--<h4 class="display-1" style="text-align:center; padding-top: -40px;"><font size="4">Made by teens, for teens. </font></h4>-->
-<!--  </div>-->
-<!--</div>-->
+<div class="parallax"></div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm">
-          <div class="text-center">
-            <div class="body">
-              <br>
-              <h1 class="title">WeFind</h1>
-              <p class="text"> At WeKure, we work to ensure that each individual is able to find credible and accurate information on any medical condition. Our material is found using multiple sources, and filtered to guarantee only the most up to date research.  </p>
-            </div>
-          </div>
-    </div>
-    <div class="col-sm">
-          <div class="text-center">
-            <div class="body">
-              <br>
-              <h1 class="title">WeKare</h1>
-              <p class="text"> WeKure strives to create a safe and informative environment for teens living with medical conditions, because as teenagers ourselves, we understand what it is like to grow up with these circumstances shaping our daily lives.   </p>
-            </div>
-          </div>
-    </div>
-    <div class="col-sm">
-          <div class="text-center">
-            <div class="body">
-              <br>
-              <h1 class="title">WeKure</h1>
-              <p class="text"> Our website hopes to educate young people on the various medical conditions affecting thousands of teenagers around the country, and provide effective answers to any questions they may have. Living with a condition does not have to be debilitating, and with the right resources, anyone can thrive. #wekure  </p>
-              <br>
-            </div>
-          </div>
-    </div>
-  </div>
-</div>
+    <br>
+<head>
+    <title>BLOOD SUGAR TEENS</title>
+</head>
+    <body>
+        <div align="center" class = "quiz_box">
+            <h1 class = "big"> This is a blood sugar quiz just for teens </h1>
+            <br>
+                <form method="POST" action="/results">
+            <h2 id = “bloodsugarquiz”> Enter a blood sugar measured after a meal </h2>
+            <br>
+                        <input type="text" name="bloodsugar">
+            <input type="submit" value="Submit">
+                </form>
+            <br>
+            <h4>If this is a diabetic emergency, do not use this quiz. We are just a secondary resource, call 911 right away or contact your doctor. </h4>
+            <br>
 
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Did you know?</h1>
-    <p class="lead">"Nearly one in three adolescents ages 12-17 (31%) had at least one chronic health condition in 2011-2012.</p>
-    <p class="lead">13 percent of adolescents had 2 or more conditions.</p>
-    <p class="lead">Chronic health conditions can interfere with many activities. Teens with chronic conditions can benefit from having information about their condition, including ways to manage symptoms appropriately."</p>
-    <p class="lead">- U.S. Dept of Health and Human Services, Office of Adolescent Health</p>
-  </div>
+        </div>
+    </body>
 </div>
 
 <style>
 .parallax {
 /* The image used */
-background-image: url(https://renovatingconflict.ca/rc-wp/wp-content/uploads/808817-free-calm-water-wallpaper-1.jpg
-);
+background-image: url(https://renovatingconflict.ca/rc-wp/wp-content/uploads/808817-free-calm-water-wallpaper-1.jpg);
 
 /* Set a specific height */
-height: 400px;
+height: 200px;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -179,11 +149,3 @@ background-size: cover;
   
   </body>
 </html>
-
-
-
-
-
-
-
-

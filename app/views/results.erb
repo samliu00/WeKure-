@@ -29,7 +29,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/about">About</a>
@@ -39,6 +39,9 @@
       </li> 
       <li class="nav-item active">
         <a class="nav-link" href="/scoliosis">Scoliosis</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#"></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -72,62 +75,51 @@ background-size: cover;
 </style>
 
 <!-- Container element -->
-<div class="parallax">
-  <div class="title">
-    <h1 id="home-title" class="display-1" style="text-align:center;padding-top:100px;">WeKure</h1>
-    <p class="display-5" style="text-align:center;">Everything you need to know about the leading medical conditions affecting adolescents today<br>Made by teens, for teens.</p>
-  </div>
-</div>
-
-
-<!--    <h4 class="display-1" style="text-align:center; padding-bottom: 0px;"><font size="4">Everything you need to know about the leading medical conditions affecting adolescents today<br> Made by teens, for teens.</font></h4>-->
-    <!--<h4 class="display-1" style="text-align:center; padding-top: -40px;"><font size="4">Made by teens, for teens. </font></h4>-->
-<!--  </div>-->
-<!--</div>-->
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-          <div class="text-center">
-            <div class="body">
-              <br>
-              <h1 class="title">WeFind</h1>
-              <p class="text"> At WeKure, we work to ensure that each individual is able to find credible and accurate information on any medical condition. Our material is found using multiple sources, and filtered to guarantee only the most up to date research.  </p>
-            </div>
-          </div>
-    </div>
-    <div class="col-sm">
-          <div class="text-center">
-            <div class="body">
-              <br>
-              <h1 class="title">WeKare</h1>
-              <p class="text"> WeKure strives to create a safe and informative environment for teens living with medical conditions, because as teenagers ourselves, we understand what it is like to grow up with these circumstances shaping our daily lives.   </p>
-            </div>
-          </div>
-    </div>
-    <div class="col-sm">
-          <div class="text-center">
-            <div class="body">
-              <br>
-              <h1 class="title">WeKure</h1>
-              <p class="text"> Our website hopes to educate young people on the various medical conditions affecting thousands of teenagers around the country, and provide effective answers to any questions they may have. Living with a condition does not have to be debilitating, and with the right resources, anyone can thrive. #wekure  </p>
-              <br>
-            </div>
-          </div>
-    </div>
-  </div>
-</div>
-
+<div class="parallax"></div>
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Did you know?</h1>
-    <p class="lead">"Nearly one in three adolescents ages 12-17 (31%) had at least one chronic health condition in 2011-2012.</p>
-    <p class="lead">13 percent of adolescents had 2 or more conditions.</p>
-    <p class="lead">Chronic health conditions can interfere with many activities. Teens with chronic conditions can benefit from having information about their condition, including ways to manage symptoms appropriately."</p>
-    <p class="lead">- U.S. Dept of Health and Human Services, Office of Adolescent Health</p>
+    <head>
+        <title>My quiz</title>
+    </head>
+    <h1 class="title">What to do</h1>
+    <br>
+    <body>
+        <% if 200 <= @answer && @answer < 300 %>
+            <p>Reduce your carb intake, usually this is by around 15 grams less, but contact your doctor just in case</p>
+            <p>Drink water to flush any excess sugar out of your system to prevent diabetic ketoacidosis, which could be dangerous if left untreated</p>
+            <p>Incorporate more exercise the next day and try to be more active</p>
+            <p>Contact your doctor to see if there maybe needs to be an increase in a medication you are taking, not necessarily bad or going in the wrong direction, so don't get discouraged!</p>
+            <p>If you have a virus, are sick, or have had hormonal changes this exaplins the high blood sugar, be sure to explain any causes you might think of to your doctor</p>
+            <p>Measure more frequently if this continues for more than two days</p>
+        <% elsif 300 <= @answer && @answer <400 %>
+            <p>Contact your doctor right away and ask what to do in terms of medication or how to lower it besides just looking at this page</p>
+            <p>Drink water to flush excess sugar out of your system and decrease the risk of diabetic ketoacidosis</p>
+            <p>Reduce your carb intake, usually this is by about 15 grams less, but contact your doctor just in case</p>
+            <p>DO NOT EXERCISE!! IT MAY RAISE IT EVEN MORE!!</p>
+            <p>Explain any causes of high blood sugar to your doctor and be as specific as possible</p>
+        <% elsif @answer >= 400 %>
+            <p>CONTACT YOUR DOCTOR RIGHT AWAY!!</p>
+            <p>You will most likely have to go to the emergency room, especially if your blood sugar number is over 500</p>
+            <p>The doctors at the hospital and your own doctor will tell you what to do in greater detail, but do not freak out, just make your way to the hospital</p>
+        <% elsif @answer < 70 %>
+            <p>You are experiencing an episode of hypoglycemia, or low blood sugar, which is common with diabetics, so don't be scared, this is common and not a big deal, as long as you are able to treat it on your own and easily</p>
+            <p>You may feel irritated, shaky, have a headache, hungry, and confusion</p>
+            <p>Eat something for at least 15-20 carbs and see if you feel better</p>
+            <p>If the symptons do not go away, keep measuring, and if you are eating and the blood sugar keeps falling, either contact your doctor or go to the emergency room</p>
+        <% elsif 180 <= @answer && @answer < 200 %>
+            <p>This is not a drastically high level, so don't worry</p>
+            <p>Your blood sugar is a bit elevated, but no large changes need to be made yet</p>
+            <p>Keep measuring as you go on over the next few days and if the blood sugar continues to grow, then contact your doctor</p>
+            <p>You can try lowering your carb intake and drinking more water if it does not fall</p>
+        <% else %>
+            <p>Everything is perfectly fine!</p>
+            <p>Good job for taking care of it!</p>
+            <p>No changes need to be made, so keep doing what you're doing</p>
+        <% end %>
   </div>
 </div>
+
 
 <style>
 .parallax {
@@ -136,7 +128,7 @@ background-image: url(https://renovatingconflict.ca/rc-wp/wp-content/uploads/808
 );
 
 /* Set a specific height */
-height: 400px;
+height: 100px;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -179,11 +171,3 @@ background-size: cover;
   
   </body>
 </html>
-
-
-
-
-
-
-
-

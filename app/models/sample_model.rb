@@ -1,3 +1,3 @@
-class SampleModel
-  attr_accessor :name, :age
-end
+# class SampleModel
+#   attr_accessor :name, :age
+# end
